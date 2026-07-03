@@ -1,0 +1,26 @@
+<h1>Mobile List</h1>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for mobile in mobiles %}
+    <tr>
+        <td>{{ mobile.name }}</td>
+        <td>{{ mobile.company }}</td>
+        <td>{{ mobile.price }}</td>
+        <td>
+            <a href="/{{ mobile.id }}">Edit</a>
+            <a href="/delete/{{ mobile.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="/">Add New Mobile</a>
